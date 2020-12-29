@@ -7,8 +7,13 @@ Settings:
 (Use a test account with reduced security settings to enable smtp to work with yahoo or google)
 3. Fill in the recipient email address to receive the daily sentiment analysis data
 
-Result example for "bitcoin":
-Negative tweets: 91.73
-Positive tweets: 199.14
-Neutral tweets: 1709.113
-Polarity: 221.83
+The Bot will scrape tweets using the keyword for the last 24 hours, filtering retweets. This list will then be analyzed using NLTK vader and Textblob to 
+provide sentiment in the form of negative tweets, positive tweets and neutral tweets. Emojis are not analyzed. Polarity is provided seperately to indicate the overall sentiment.
+
+Result for example
+Keywords: "Lockdown London"
+
+Negative tweets: 6.85% 
+Positive tweets: 7.18% 
+Neutral tweets: 85.97% 
+Polarity: 7.79
